@@ -148,13 +148,13 @@ Analyzes regional order performance and customer payment preferences.
 ## 📷 **Dashboard Preview**
 
 ### 1. Sales Overview
-![Sales Overview](images/Overview.png)
+![Sales Overview](image/SalesOverview.png)
 
 ### 2. Product Analysis
-![Product Analysis](images/Overview.png)
+![Product Analysis](image/ProductAnalysis.png)
 
 ### 3. Regional & Customer
-![Regional and Customer](images/Overview.png)
+![Regional and Customer](image/Regional&Customer.png)
 
 
 ## 🚀 **Project Outcome**
