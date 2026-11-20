@@ -1,102 +1,170 @@
-# Amazon-Sales-Analysis-Dashboard-PowerBI
-📌 ##Project Overview
+# Amazon Sales Analysis Dashboard | Power BI
 
-This project presents an interactive mazon sales dashboard developed using Microsoft PowerBI.
+## 📌 **Project Overview**
 
-It analyzes sales performance,Product and category performance,refional and customer informations and payment methods to identify impportant insights.
+This project focuses on analyzing Amazon sales data using Microsoft Power BI. The main objective is to transform raw sales data into meaningful business insights through data cleaning, calculated columns, DAX measures, and interactive dashboards.
 
-🎯 ##Objectives
-The main objectives of this project are:
+The dashboard provides an overview of sales performance, product analysis, regional performance, and customer purchasing patterns.
 
--Analyze overall sales performance
--Identify top-performing product categories
--Compare sales across different outlet regions
--Analyze sales by location customer and order patterns
--Understand payment method usage
-- Track monthly sales trends
+## 🎯 **Project Objectives**
 
-##📂 Dataset
--amazon_sales_dashboard_data.csv  
--Records:6000 rows
--Period:jan 2023-dec 2024
--columns:10
+- Analyze overall sales performance.
+- Identify top-performing product categories and products.
+- Track monthly sales trends.
+- Analyze regional sales performance.
+- Understand customer payment preferences.
+- Identify key business insights to support decision-making.
 
-##Main columns
--Order Id
--Order_Date
--Category
--Product_Name
--Quantity
--Price
--Sales
--Region
--Customer_Name
--Payment_Method
+## 📂 **Dataset Overview**
 
-##Data cleaning
-Data cleaning and trannformation were performed usig powerquery.
-steps include:
--Promoted headers
--changed data types
--Trimmed and cleaned text values
--standardized region names
--removed duplicated records
--handled missing values
--recalculated sales using quantity*price
+- **Dataset Name:** Amazon Sales Dataset
+- **Total Records:** 6,000 rows
+- **Total Columns:** 10
+- **Time Period:** January 2023 – December 2024
 
-##Calculated columns
--Order month
--Order year
--Price tier
--Is Weekend order
+### **Dataset Columns**
 
-##DAX Measures
--Total sales
--Total orders
--Units sold
--Avg order value
--Total customers
--Sales MOM% Change
--Top Category sales
--% of total sales
+| Column Name | Description |
+|---|---|
+| Order_ID | Unique order identifier |
+| Order_Date | Date of the order |
+| Category | Product category |
+| Product_Name | Name of the product |
+| Quantity | Number of units purchased |
+| Price | Unit price |
+| Sales | Total sales amount |
+| Region | Sales region |
+| Customer_Name | Customer name |
+| Payment_Method | Payment method used |
 
-##📈 Dashboard  pages
-1.Sales Overview
-KPI
--Total sales
--Total orders
--Avg order value
--Units Sold
--Monthly sales trend 
--Sales by payment method
--Sales by region
-2.Product and category analysis
-KPI-categories,Products tracked,Top Category,Top product
--Sales by Category
--Top 5 products by sales
--Units sold by category
-3.Regional and customer analysis
--Orders by region
--Regional sales share
--Orders by payment method
+## 🛠️ **Tools & Technologies**
 
-🔑 Key Insights
-Furniture generated strong revenue despite having comparatively lower units sales.
--South region recorded the highest sales among the regions.
-Credit/debit card was a major payment method with upi also contributing significantly.
+- Microsoft Power BI
+- Power Query
+- DAX (Data Analysis Expressions)
+- Data Visualization
+- Data Cleaning & Transformation
 
-🛠️ Tools & Technologies
-Microdoft powerBI
-power query
-DAX
-📁 Project Structure
-Amazon Sales Analysis Dashboard/
-│
-├── Amazon Sales Analysis.pptx
-├──README.md
-├── Amazon_sales.CSV
-├── Amazonsales.pbix
-├── Amazonsales.pdf
+## 🧹 **Data Cleaning & Transformation**
+
+The following data cleaning steps were performed using Power Query:
+
+- Promoted the first row as column headers.
+- Changed data types appropriately.
+- Removed unnecessary spaces from text columns.
+- Standardized region names.
+- Removed 180 duplicate rows.
+- Handled 508 rows containing missing values.
+- Filtered invalid quantity values.
+- Recalculated the Sales column.
+- Loaded the cleaned data into the Power BI data model.
+
+### **Data Cleaning Summary**
+
+| Description | Count |
+|---|---:|
+| Original Rows | 6,000 |
+| Duplicate Rows Removed | 180 |
+| Rows with Missing Values | 508 |
+| Final Clean Orders | 5,820 |
+
+## 📊 **Calculated Columns**
+
+The following calculated columns were created using DAX:
+
+1. **Order Month** – Extracts the month and year from the order date.
+2. **Order Year** – Extracts the year from the order date.
+3. **Price Tier** – Categorizes products into Premium, Mid, and Budget segments.
+4. **Is Weekend Order** – Identifies whether an order was placed on a weekday or weekend.
+
+## 📐 **DAX Measures**
+
+The following DAX measures were created to calculate important business KPIs:
+
+- Total Sales
+- Total Orders
+- Units Sold
+- Average Order Value (AOV)
+- Total Customers
+- Sales MoM % Change
+- Top Category Sales
+- % of Total Sales
+
+## 📈 **Dashboard Pages**
+
+The dashboard consists of **3 interactive pages**.
+
+### 1. Sales Overview
+
+Provides an overall view of sales performance.
+
+**Visualizations:**
+- Monthly Sales Trend – Line Chart
+- Sales by Payment Method – Donut Chart
+- Sales by Region – Bar Chart
+
+### 2. Product Analysis
+
+Focuses on product and category performance.
+
+**Visualizations:**
+- Sales by Category – Horizontal Bar Chart
+- Top 5 Products by Sales – Column Chart
+- Quantity Sold by Category – Clustered Column Chart
+
+### 3. Regional & Customer Analysis
+
+Analyzes regional order performance and customer payment preferences.
+
+**Visualizations:**
+- Total Orders by Region – Bar Chart
+- Regional Sales Share – Donut Chart
+- Orders by Payment Method – Column Chart
+
+## 🔍 **Key Business Insights**
+
+- **Furniture leads in revenue:** Furniture generated ₹2.15 Cr, contributing approximately 34% of total sales, despite having the lowest unit sales among categories.
+- **Balanced Regional Performance:** South recorded the highest sales at ₹1.29 Cr, while sales remained relatively evenly distributed across regions.
+- **Payment Preferences:** Credit Card and Debit Card contributed the highest sales, while UPI accounted for ₹93.5 L.
+- **Data Quality:** Duplicate and incomplete records highlighted the importance of data cleaning before analysis.
+
+## 💡 **Business Recommendations**
+
+- Focus on high-revenue categories such as Furniture and Electronics.
+- Investigate the October sales dip to understand possible seasonal trends.
+- Encourage digital payment methods such as UPI and Amazon Pay.
+- Automate Power Query cleaning steps to maintain data quality during future refreshes.
+
+## 📁 **Project Files**
+
+| File Name | Description |
+|---|---|
+| amazonsales.pbix | Power BI dashboard file |
+| Amazon Sales_Analysis.pptx | Project presentation |
+| README.md | Project documentation |
+| amazon_sales.csv | Project dataset |
+| amazonsales.pdf | Exported pdf from PowerBIdashboard |
+
+## 📷 **Dashboard Preview**
+
+### 1. Sales Overview
+![Sales Overview](images/Overview.png)
+
+### 2. Product Analysis
+![Product Analysis](images/Overview.png)
+
+### 3. Regional & Customer
+![Regional and Customer](images/Overview.png)
 
 
+## 🚀 **Project Outcome**
+
+This project demonstrates how raw sales data can be transformed into an interactive Power BI dashboard using Power Query, calculated columns, and DAX measures.
+
+It helps identify sales trends, top-performing categories, regional performance, and customer payment preferences, supporting better business decision-making.
+
+## 👩‍💻 Author
+
+[Anjana P C]
+**Amazon Sales Analysis – Power BI Project**
 
